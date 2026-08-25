@@ -1,2 +1,3 @@
 Nombre: Karen Blanco
 Correo: blancomillankarenlorena@gmail.com
+programa: desarrollo de software
