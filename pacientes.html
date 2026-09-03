@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacientes - Aftercare Dental</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Aftercare Dental</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="pacientes.html">Pacientes</a></li>
+            <li><a href="followup.html">Follow-Up</a></li>
+            <li><a href="configuracion.html">Configuración</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+
+    <script src="js/script.js"></script>
+<form onsubmit="return validarFormulario(event)">
+
+    <label for="nombre">Nombre del paciente</label>
+    <input type="text" id="nombre" required>
+
+    <label for="telefono">Teléfono</label>
+    <input type="tel" id="telefono" required>
+
+    <label for="area">Área odontológica</label>
+    <select id="area" required>
+        <option value="">Seleccione un área</option>
+        <option>Ortodoncia</option>
+        <option>Endodoncia</option>
+        <option>Rehabilitación</option>
+        <option>Periodoncia</option>
+    </select>
+
+    <label for="ultimaCita">Última cita</label>
+    <input type="date" id="ultimaCita">
+
+    <label for="control">Próximo control</label>
+    <input type="date" id="control">
+
+    <label for="observaciones">Observaciones</label>
+    <textarea id="observaciones" rows="4"></textarea>
+
+    <button type="submit" class="btn">
+        Registrar Paciente
+    </button>
+
+</form>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración - Aftercare Dental</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+
+    <header>
+        <h1>Aftercare Dental</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="pacientes.html">Pacientes</a></li>
+            <li><a href="followup.html">Follow-Up</a></li>
+            <li><a href="configuracion.html">Configuración</a></li>
+        </ul>
+    </nav>
+
+    <main>
+<main class="configuracion">
+
+    <div class="config-grid">
+
+        <div class="config-card">
+
+            <h2>Configuración General</h2>
+
+            <form onsubmit="return guardarConfiguracion()">
+
+                <label>Nombre de la Clínica</label>
+                <input type="text" id="clinica">
+
+                <label>Correo de Contacto</label>
+                <input type="email" id="correoClinica">
+
+                <label>Frecuencia de Seguimiento</label>
+                <select id="frecuencia">
+                    <option value="">Seleccione una opción</option>
+                    <option>1 Mes</option>
+                    <option>3 Meses</option>
+                    <option>6 Meses</option>
+                </select>
+
+                <button type="submit">
+                    Guardar Configuración
+                </button>
+
+            </form>
+<div class="config-card">
+
+    <h2>Reglas de Seguimiento</h2>
+
+    <table>
+        <tr>
+            <th>Área</th>
+            <th>Días de Riesgo</th>
+        </tr>
+
+        <tr>
+            <td>Ortodoncia</td>
+            <td>120</td>
+        </tr>
+
+        <tr>
+            <td>Endodoncia</td>
+            <td>90</td>
+        </tr>
+
+        <tr>
+            <td>Periodoncia</td>
+            <td>60</td>
+        </tr>
+    </table>
+
+</div>
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

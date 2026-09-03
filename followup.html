@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow-Up - Aftercare Dental</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Aftercare Dental</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="pacientes.html">Pacientes</a></li>
+            <li><a href="followup.html">Follow-Up</a></li>
+            <li><a href="configuracion.html">Configuración</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <h2>Seguimiento de Pacientes</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Paciente</th>
+                    <th>Última Visita</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>María Gómez</td>
+                    <td>15 días</td>
+                    <td class="activo">Activo</td>
+                    <td>
+                        <button onclick="contactarPaciente()">
+                            Contactar
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Juan Pérez</td>
+                    <td>68 días</td>
+                    <td class="riesgo">En Riesgo</td>
+                    <td>
+                        <button onclick="contactarPaciente()">
+                            Contactar
+                        </button>
+                    </td>
+                </tr>
+                <td>Lura Marquez</td>
+                    <td>30 días</td>
+                    <td class="pendientes">pendientes</td>
+                    <td>
+                        <button onclick="contactarPaciente()">
+                            Contactar
+                        </button>
+                    </td>
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </main>
+
+    <script src="js/script.js"></script>
+    <form onsubmit="return guardarConfiguracion()"></form>
+
+</body>
+
+</html>
