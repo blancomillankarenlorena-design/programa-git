@@ -3,7 +3,7 @@ package com.aftercare;
 import java.sql.Connection;
 import com.aftercare.conexion.Conexion;
 
-public class PruebaConexion {
+public class pruebaconexion {
     public static void main(String[] args) {
         try (Connection conexion = Conexion.obtenerConexion()) {
             if (conexion != null && !conexion.isClosed()) {
