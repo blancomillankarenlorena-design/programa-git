@@ -1,2 +1,13 @@
 *.class
 .DS_Store
+
+# Carpetas de compilación e IDEs
+bin/
+build/
+.vscode/
+.settings/
+.classpath
+.project
+
+# Archivos compilados o librerías locales
+*.jar
