@@ -1,0 +1,262 @@
+/* Aftercare Dental - hoja de estilos
+   Usada por: index.html, pacientes.html, aftercare.html,
+   followup.html, configuracion.html y pacientes.jsp */
+
+:root {
+    --tinta: #14323a;
+    --verde: #176b6c;
+    --verde-oscuro: #0f5052;
+    --menta: #e6f2f0;
+    --fondo: #f5f9f8;
+    --blanco: #ffffff;
+    --borde: #c5d8d4;
+    --texto: #1d2b2e;
+    --texto-suave: #55696d;
+    --error: #b3361f;
+    --error-fondo: #fbeae6;
+    --ok: #1d6b3a;
+    --ok-fondo: #e4f4ea;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--texto);
+    background: var(--fondo);
+}
+
+/* ---------- Encabezado y menú ---------- */
+
+header {
+    background: var(--tinta);
+    padding: 1.1rem 1.5rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--blanco);
+}
+
+nav {
+    background: var(--blanco);
+    border-bottom: 1px solid var(--borde);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+nav a {
+    display: block;
+    padding: 0.85rem 0.9rem;
+    color: var(--tinta);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    border-bottom-color: var(--borde);
+}
+
+nav a[aria-current="page"] {
+    color: var(--verde);
+    border-bottom-color: var(--verde);
+}
+
+/* ---------- Contenido ---------- */
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+}
+
+h2 {
+    margin: 0 0 1.25rem;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    color: var(--tinta);
+}
+
+h2:not(:first-child) {
+    margin-top: 2.5rem;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid var(--borde);
+    margin: 2.5rem 0 0;
+}
+
+/* ---------- Formularios ---------- */
+
+form {
+    max-width: 560px;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin: 0 0 0.35rem;
+    font-weight: 600;
+    color: var(--tinta);
+}
+
+form > input,
+form > select,
+form > textarea {
+    margin-bottom: 1rem;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    font: inherit;
+    color: var(--texto);
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 6rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid rgba(23, 107, 108, 0.3);
+    border-color: var(--verde);
+}
+
+button,
+.btn {
+    display: inline-block;
+    padding: 0.7rem 1.4rem;
+    font: inherit;
+    font-weight: 600;
+    color: var(--blanco);
+    background: var(--verde);
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+button:hover,
+.btn:hover {
+    background: var(--verde-oscuro);
+}
+
+button:focus-visible,
+.btn:focus-visible,
+nav a:focus-visible {
+    outline: 3px solid var(--tinta);
+    outline-offset: 2px;
+}
+
+/* ---------- Mensajes ---------- */
+
+.mensaje-error,
+.mensaje-ok {
+    max-width: 560px;
+    margin: 0 0 1.25rem;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border-left: 4px solid;
+}
+
+.mensaje-error {
+    color: var(--error);
+    background: var(--error-fondo);
+    border-color: var(--error);
+}
+
+.mensaje-ok {
+    color: var(--ok);
+    background: var(--ok-fondo);
+    border-color: var(--ok);
+}
+
+/* ---------- Tabla de pacientes ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+}
+
+th,
+td {
+    padding: 0.7rem 0.9rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--borde);
+}
+
+th {
+    color: var(--blanco);
+    background: var(--tinta);
+    font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+    background: var(--menta);
+}
+
+/* ---------- Pantallas pequeñas ---------- */
+
+@media (max-width: 640px) {
+    main {
+        padding: 1.5rem 1rem 2rem;
+    }
+
+    nav ul {
+        padding: 0 0.5rem;
+    }
+
+    form {
+        padding: 1.1rem;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    button,
+    .btn {
+        transition: none;
+    }
+}
