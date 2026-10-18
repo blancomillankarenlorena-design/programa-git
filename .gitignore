@@ -11,3 +11,8 @@ build/
 
 # Archivos compilados o librerías locales
 *.jar
+
+*.class
+bin/
+webapp/WEB-INF/classes/
+fuentes.txt
